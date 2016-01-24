@@ -1,0 +1,178 @@
+html body {
+    font-size: 36px;
+}
+
+
+/*Styling footer*/
+
+.text-in-footer,
+.footer-links {
+    display: none;
+}
+
+.footer-content .footer-column {
+    display: block;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.footer-header {
+    text-align: center;
+}
+
+
+/*Styling pagination*/
+
+.pagination {
+    width: 62.4%;
+}
+
+.pagination a {
+    padding: 0 20px;
+}
+
+
+/*Styling posts*/
+
+.post {
+    margin-bottom: 25px;
+}
+
+.post-image-content {
+    height: 360px;
+}
+
+.post-summary {
+	line-height: 1.5em;
+	font-size: 0.75em;
+}
+
+/*Styling credentials*/
+
+.credentials {
+    text-align: center;
+    font-size: 40%;
+}
+
+.credentials-separator {
+    display: none;
+}
+
+
+/*Styling post location*/
+
+.post-location {
+    display: none;
+}
+
+nav.site-navigation>ul>li {
+    display: block;
+}
+
+nav.site-navigation>ul>li>a {
+    padding: .3em .3em .3em 1em;
+    width: 7em;
+}
+
+nav.site-navigation>ul>li>ul.submenu {
+    display: none;
+    position: static;
+}
+
+nav.site-navigation>ul>li>ul.submenu {
+    padding-left: 1em;
+}
+
+.menu-lable {
+    display: block;
+}
+
+.menu-lable:after {
+    position: absolute;
+    content: "\2261";
+    font-size: 3.5em;
+    top: -0.2em;
+    left: 0.25em;
+    color: #dcc08e;
+}
+
+.menu-checkbox {
+	display: none;
+}
+
+nav.site-navigation {
+	display: none;
+}
+
+.menu-checkbox:checked ~ nav.site-navigation {
+    display: block;
+    position: absolute;
+    top: -2.6em;
+    left: 0;
+    font-size: 1.5em;
+    z-index: 20;
+    background-color: #333;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.6);
+    margin: 0;
+}
+
+.search_field {
+	display: none;
+}
+
+.mobile-search {
+	display: inline-block;
+	position: absolute;
+	right: 5em;
+	vertical-align: middle;
+	height: 2em;
+}
+
+.mobile-search .mobile-search-icon {
+	display: inline-block;
+	position: absolute;
+	right: -0.8em;
+	top: -0.2em;
+	font-size: 4em;
+	color: #dcc08e;
+}
+
+.mobile-search-icon:hover,
+.mobile-search-icon:active {
+	color: white;
+}
+
+.mobile-search-icon:hover ~ .mobile-search-field,
+.mobile-search-icon:active ~ .mobile-search-field {
+	display: inline-block;
+}
+
+.mobile-search-field {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 2em;
+	background-color: #333;
+	width: 8em;
+	vertical-align: middle;
+	padding: 0.4em;
+	border-right: 3px solid #595959;
+    border-bottom: 3px solid #595959;
+}
+
+/*Styling logo*/
+
+.navigation-separator {
+    display: none;
+}
+
+#logo {
+    width: 14em;
+    height: 3.7em;
+    margin-left: 4.5em;
+}
+
+#header-container {
+    margin: 4em 5% 2em 5%;
+}

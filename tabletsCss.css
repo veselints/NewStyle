@@ -1,0 +1,63 @@
+html body {
+	font-size: 20px;
+}
+
+/*Styling pagination*/
+.pagination {
+    width: 80.5%;
+}
+
+.pagination a {
+    padding: 0 12px;
+}
+
+/*Styling index page posts*/
+.post {
+    width: 44.5%;
+    margin: 2.5%;
+}
+
+.post-summary {
+	line-height: 1.5em;
+	font-size: 0.75em;
+}
+
+div.double-column {
+    width: 94.8%;
+}
+
+.post-image-content {
+    height: 240px;
+}
+
+/*Styling credentials*/
+.credentials-br {
+	display: none;
+}
+
+.footer .credentials {
+    text-align: center;
+    font-size: 0.75em;
+}
+
+.credentials-separator {
+	display: inline-block;
+}
+
+/*Styling logo*/
+#logo {
+	margin-left: 6em;
+}
+
+.mobile-search .mobile-search-icon {
+	right: 0;
+}
+
+.mobile-search-field {
+	right: 2em;
+	width: 7.5em;
+}
+
+.menu-lable:after {
+    left: 0.8em;
+}

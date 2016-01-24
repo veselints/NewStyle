@@ -1,0 +1,29 @@
+/*Styling footer*/
+.footer-content .footer-column {
+    padding: 0.7% 1% 0.7% 0.7%;
+    width: 23%;
+}
+
+/*Styling pagination*/
+.pagination {
+    width: 90.8%;
+}
+
+/*Styling index page posts*/
+.post {
+    width: 14.75%;
+    margin: 0.8%;
+}
+
+div.double-column {
+    width: 31.3%;
+}
+
+/*Styling navigation*/
+.navigation-separator {
+	display: none;
+}
+
+#header-container {
+	margin: 120px 5% 20px 5%;
+}
