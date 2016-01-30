@@ -21,5 +21,5 @@
 
     angular.module('theStyleApp', ['ngRoute', 'ngCookies', 'theStyleApp.controllers', 'theStyleApp.directives']) //'theStyleApp.filters'
         .config(['$routeProvider', config])
-        .constant('baseServiceUrl', 'http://localhost:7777/api/'); // Chage this when you migrate to heroku
+        .constant('baseServiceUrl', 'https://fast-badlands-79260.herokuapp.com/api/'); // Chage this when you migrate to heroku
 }());
