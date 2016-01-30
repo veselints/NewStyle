@@ -79,7 +79,10 @@ nav.site-navigation>ul>li>ul.submenu {
 }
 
 nav.site-navigation>ul>li>ul.submenu {
-    padding-left: 1em;
+    padding-left: 15%;
+}
+nav.site-navigation>ul>li>ul.submenu li {
+    padding: 10px 0;
 }
 
 .menu-lable {
