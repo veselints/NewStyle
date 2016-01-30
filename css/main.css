@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: LigueGothic;
-    src: url('./fonts/LeagueGothic-Regular.otf') format("opentype");
+    src: url('../fonts/LeagueGothic-Regular.otf') format("opentype");
 }
 
 @font-face {
     font-family: DroidSans;
-    src: url('./fonts/DroidSans.ttf') format("truetype");
+    src: url('../fonts/DroidSans.ttf') format("truetype");
 }
 
 body,
@@ -57,7 +57,7 @@ button:focus {
 }
 
 #logo {
-    background-image: url('./img/logo.png');
+    background-image: url('../img/logo.png');
     background-repeat: no-repeat;
     background-size: 100%;
     display: inline-block;
@@ -195,7 +195,7 @@ div.double-column .post-image-content {
     float: right;
 }
 
-.post-category {
+p.post-category {
     font-size: 1.35em;
     margin-bottom: 0.55em;
     background-color: #9a1d0d;
@@ -203,7 +203,7 @@ div.double-column .post-image-content {
     text-shadow: 1px 1px black;
 }
 
-.post-date {
+p.post-date {
     font-size: 2.8em;
     line-height: 0.5em;
     margin-bottom: 0.4em;
@@ -212,7 +212,7 @@ div.double-column .post-image-content {
     clear: both;
 }
 
-.post-title {
+p.post-title {
     font-family: LigueGothic;
     text-transform: uppercase;
     color: #9a1d0d;
@@ -220,14 +220,14 @@ div.double-column .post-image-content {
     margin: 10px 13px 0 13px;
 }
 
-.post-author {
+p.post-author {
     font-family: LigueGothic;
     text-transform: uppercase;
     font-size: 1em;
     margin: 0 13px;
 }
 
-.post-summary {
+p.post-summary {
     margin: 0 13px 25px 13px;
     color: #7b7b7b;
     height: 7.6em;
@@ -332,13 +332,17 @@ div.double-column .post-image-content {
 .footer-content .footer-column {
     text-align: left;
     font-family: DroidSans;
-    font-size: 0.75em;
     color: #d1d1d1;
-    line-height: 1.5em;
     vertical-align: top;
 }
 
-.footer-content .footer-column .footer-header {
+.footer-content .footer-column a,
+.footer-content .footer-column p.text-in-footer {
+    font-size: 0.75em;
+    line-height: 1.5em;
+}
+
+.footer-content .footer-column p.footer-header {
     font-family: LigueGothic;
     text-transform: uppercase;
     color: #dcc08e;
@@ -346,7 +350,7 @@ div.double-column .post-image-content {
     margin: 15px 0;
 }
 
-.footer-column>a:hover .footer-header {
+.footer-column>a:hover p.footer-header {
     color: white;
 }
 
@@ -388,15 +392,15 @@ div.double-column .post-image-content {
     color: white;
 }
 
-li a span.bullet {
+.footer-content .footer-column a span.bullet {
     color: #5d5d5d;
     text-shadow: 1px 1px black;
     font-family: Arial;
     font-size: 1.5em;
 }
 
-li a:hover span.bullet,
-li a:active span.bullet {
+.footer-content .footer-column a:hover span.bullet,
+.footer-content .footer-column a:active span.bullet {
     color: #9a1d0d;
 }
 
@@ -404,9 +408,7 @@ li a:active span.bullet {
 /*Styling post page*/
 
 .post-and-comments {
-    width: 72%;
     margin-bottom: 40px;
-    margin-right: 16px;
     display: inline-block;
 }
 
@@ -419,10 +421,8 @@ li a:active span.bullet {
 }
 
 .post-full-attributes-contents {
-    float: left;
-    height: 600px;
-    width: 196px;
     margin-right: 28px;
+    margin-bottom: 30px;
 }
 
 .post-full-text-contents:after {
@@ -436,14 +436,14 @@ li a:active span.bullet {
 
 /*Styling post contents*/
 
-.post-full-title {
+p.post-full-title {
     font-family: LigueGothic;
     text-transform: uppercase;
     color: #9a1d0d;
     font-size: 2em;
 }
 
-.post-full-author {
+p.post-full-author {
     font-family: LigueGothic;
     text-transform: uppercase;
     font-size: 1em;
@@ -456,7 +456,6 @@ li a:active span.bullet {
 }
 
 .post-full-text {
-    font-size: 0.75em;
     line-height: 1.3em;
     color: #7b7b7b;
 }
@@ -480,8 +479,6 @@ li a:active span.bullet {
 
 .post-full-image-content {
     box-shadow: inset 0 0 10px #3a3a3a;
-    width: 186px;
-    height: 186px;
     border: 5px solid #efefef;
 }
 
@@ -495,7 +492,7 @@ li a:active span.bullet {
     margin: 28px 0 10px;
 }
 
-.tags-tags {
+p.tags-tags {
     display: inline-block;
     color: #6e6e6e;
     margin: 2px;
@@ -533,8 +530,6 @@ li a:active span.bullet {
 /*Styling post comments*/
 
 .post-full-comments {
-    margin-left: 20%;
-    width: 80%;
     background-color: white;
     position: relative;
     padding: 10px 0;
@@ -574,7 +569,7 @@ li a:active span.bullet {
     left: 4px;
 }
 
-.comment-date {
+p.comment-date {
     font-family: LigueGothic;
     text-transform: uppercase;
     color: white;
@@ -591,13 +586,13 @@ li a:active span.bullet {
     margin-left: 90px;
 }
 
-.comment-author {
+p.comment-author {
     font-family: LigueGothic;
     text-transform: uppercase;
     font-size: 1.33em;
 }
 
-.comment-text {
+p.comment-text {
     font-size: 0.75em;
     line-height: 1.3em;
     color: #7b7b7b;
@@ -607,7 +602,7 @@ li a:active span.bullet {
     text-align: right;
 }
 
-.reply-btn {
+a.reply-btn {
     display: inline-block;
     color: #6e6e6e;
     margin-top: 10px;
@@ -622,27 +617,22 @@ li a:active span.bullet {
     margin-left: 90px;
 }
 
-.comment-form {
-    width: 500px;
-}
-
 .comment-form input,
 .comment-form textarea {
     border: 1px solid #d6d6d6;
     background-color: #f6f6f6;
     box-shadow: inset 1px 1px 3px #d6d6d6;
     padding: 10px;
-    margin: 15px 0;
+    
 }
 
 .comment-form input {
     display: block;
-    width: 350px;
+    margin: 15px 0;
 }
 
 .post-full-comments-content .comment-form textarea {
     margin: 5px 0;
-    width: 478px;
 }
 
 
@@ -667,7 +657,6 @@ li a:active span.bullet {
 .post-sedebar h4 {
     font-family: LigueGothic;
     text-transform: uppercase;
-    font-size: 1.65em;
     color: #9a1d0d;
     margin: 16px;
     margin-bottom: 8px;
@@ -744,6 +733,7 @@ li a:active span.bullet {
 
 .aside-link-to-post {
     margin: 10px 16px;
+    min-height: 50px;
 }
 
 .aside-link-to-post:first-of-type {
@@ -751,39 +741,35 @@ li a:active span.bullet {
 }
 
 .aside-link-to-post img {
-    display: inline-block;
+    display: block;
+    float: left;
+    margin-right: 10px;
     height: 44px;
     width: 44px;
     border: 3px solid #d6d6d6;
 }
 
-.aside-link-to-post-texts {
-    display: inline-block;
-    width: 73%;
+.aside-link-to-post p.title {
     text-shadow: 1px 1px white;
-    vertical-align: top;
-    padding: 2px;
-}
-
-.aside-link-to-post-texts .title {
     font-size: 0.75em;
     padding-bottom: 4px;
 }
 
-.aside-link-to-post-texts .author {
+.aside-link-to-post p.author {
+    text-shadow: 1px 1px white;
     font-size: 0.6em;
     font-family: Georgia;
     color: #a1a1a1;
     font-style: italic;
 }
 
-.post-location {
+p.post-location {
     color: #676767;
     font-size: 0.75em;
     margin: 0 0 12px 6%;
 }
 
-.post-location a {
+p.post-location a {
     color: #8e8e8e;
 }
 

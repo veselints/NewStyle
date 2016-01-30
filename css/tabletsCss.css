@@ -127,7 +127,7 @@ nav.site-navigation>ul>li>ul.submenu {
 .mobile-search .mobile-search-icon {
     display: inline-block;
     position: absolute;
-    right: -0.8em;
+    right: -0.6em;
     top: -0.2em;
     font-size: 4em;
     color: #dcc08e;
@@ -157,10 +157,6 @@ nav.site-navigation>ul>li>ul.submenu {
     border-bottom: 3px solid #595959;
 }
 
-.mobile-search .mobile-search-icon {
-    right: 0;
-}
-
 .mobile-search-field {
     right: 2em;
     width: 7.5em;
@@ -176,4 +172,56 @@ nav.site-navigation>ul>li>ul.submenu {
 	margin-left: 6em;
     width: 14em;
     height: 3.7em;
+}
+
+/*Styling comment form*/
+
+.comment-form {
+    width: 100%;
+}
+
+.post-full-comments-content .comment-form textarea {
+    width: 96%;
+}
+
+/*Styling sidebar*/
+.post-sedebar {
+    display: none;
+}
+
+/*Styling post on post page*/
+
+.post-and-comments {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.post-full-comments {
+    margin-left: 0;
+    width: 100%;
+}
+
+.post-full-text {
+    font-size: 0.75em;
+}
+
+.related,
+.tags,
+.shared {
+    display: block;
+}
+
+.post-full-attributes-contents {
+    float: left;
+    width: 196px;
+}
+
+.post-full-image-content {
+    width: 186px;
+    height: 186px;
+}
+
+.tags-phone,
+.share-phone {
+    display: none;
 }

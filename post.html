@@ -3,11 +3,14 @@
 
 <head>
     <title>The Syle</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" media="only screen and (min-device-width : 320px)" href="phonesCss.css">
-    <link rel="stylesheet" media="only screen and (min-device-width : 600px)" href="tabletsCss.css">
-    <link rel="stylesheet" media="only screen and (min-device-width : 900px)" href="compsCss.css">
-    <link rel="stylesheet" media="only screen and (min-device-width : 1260px)" href="widesCss.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="only screen and (min-device-width: 320px) and (max-device-width: 599px)" href="./css/phonesCss.css">
+    <link rel="stylesheet" media="only screen and (min-device-width: 600px) and (max-device-width: 899px)" href="./css/tabletsCss.css">
+    <link rel="stylesheet" media="only screen and (min-device-width: 900px) and (max-device-width: 1259px)" href="./css/compsCss.css">
+    <link rel="stylesheet" media="only screen and (min-device-width: 1260px)" href="./css/widesCss.css">
+    <link rel="stylesheet" media="only screen and (min-device-width: 1260px) and (max-width: 1259px)" href="./css/compsCss.css">
+    <link rel="stylesheet" media="only screen and (min-device-width: 1260px) and (max-width: 899px)" href="./css/tabletsCss.css">
+    <link rel="stylesheet" media="only screen and (min-device-width: 1260px) and (max-width: 599px)" href="./css/phonesCss.css">
 </head>
 
 <body>
@@ -106,7 +109,7 @@
         </nav>
     </header>
     <main class="post-page-content-container">
-    <p class="post-location">Home &raquo; Some Category &raquo; <a href="#">Post Title Goes here</a></p>
+        <p class="post-location">Home &raquo; Some Category &raquo; <a href="#">Post Title Goes here</a></p>
         <article class="post-and-comments">
             <div class="post-full-content">
                 <div class="post-full-attributes-contents">
@@ -157,6 +160,13 @@
                     <p class="post-full-author">
                         POSTED BY NICK ROACH IN SOME CATEGORY | 30 COMMENTS
                     </p>
+                    <div class="tags-phone">
+                        <p class="tags-tags">clebrity</p>
+                        <p class="tags-tags">clothing</p>
+                        <p class="tags-tags">high fasion</p>
+                        <p class="tags-tags">modeling</p>
+                        <p class="tags-tags">shoes</p>
+                    </div>
                     <hr class="post-full-separator" />
                     <p class="post-full-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur massa ut viverra facilisis. Suspendisse aliquam viverra vestibulum. Vestibulum mollis est purus, in suscipit orci porttitor sed. Nulla nibh lorem, tempus mattis pulvinar quis, hendrerit quis dui. Nulla a est fermentum, lacinia felis at, fermentum nunc. Mauris eleifend gravida convallis. Donec euismod, tellus vitae feugiat sodales, lacus nunc porta nunc, vel ullamcorper nunc justo nec mauris. Donec auctor nunc non purus aliquet sollicitudin. Ut volutpat nulla et nulla molestie posuere. Maecenas at ex hendrerit, scelerisque sapien sit amet, egestas lacus. Praesent id nibh a sapien rhoncus convallis ut et felis. Nulla fringilla bibendum sollicitudin. Proin viverra orci purus, sit amet scelerisque tellus rhoncus molestie. Nunc ultrices aliquam est sit amet dapibus. Cras sodales non risus nec tincidunt. Aliquam eleifend efficitur velit sit amet fringilla.
@@ -173,6 +183,13 @@
                         </br>
                         Nunc et congue tortor. Phasellus egestas sem eros, eget ultricies lectus vulputate ac. Phasellus pellentesque eros hendrerit, bibendum ante et, pellentesque eros. Etiam lectus nunc, blandit et cursus quis, consectetur quis metus. Praesent cursus eros vitae diam porta ultricies. Sed sed venenatis sem. Phasellus feugiat nibh nibh, vel auctor purus feugiat laoreet. Sed interdum eget arcu sed pulvinar. In sollicitudin, sem vel tempor euismod, turpis lectus semper mi, id venenatis lacus tellus id ipsum. Duis vel ligula nisi. Sed malesuada elit metus, sed pulvinar nisi interdum at. Aliquam erat volutpat. Integer sed est ex. Sed nisl augue, tempor et odio sit amet, ultrices hendrerit diam. Phasellus molestie lacus libero, eu tempus dui convallis ac. Praesent laoreet ex ac sem dictum rhoncus.
                     </p>
+                    <div class="share-phone">
+                        <a href="#"><img src="./img/twetterLogo.png" alt="twetter"></a>
+                        <a href="#"><img src="./img/facebookLogo.png" alt="facebook"></a>
+                        <a href="#"><img src="./img/thirdLogo.png" alt="dontknow"></a>
+                        <a href="#"><img src="./img/diggLogo.png" alt="digg"></a>
+                        <a href="#"><img src="./img/fifthLogo.png" alt="what"></a>
+                    </div>
                 </div>
                 <div class="post-full-top"></div>
                 <div class="post-full-bottom"></div>
@@ -469,7 +486,8 @@
             </div>
         </div>
         <p class="credentials">
-            Designed by <a href="#">ElegnatThemes</a><br class="credentials-br"/><span class="credentials-separator">| </span>Powered by <a href="http://telerikacademy.com/">Telerik Academy</a>
+            Designed by <a href="#">ElegnatThemes</a>
+            <br class="credentials-br" /><span class="credentials-separator">| </span>Powered by <a href="http://telerikacademy.com/">Telerik Academy</a>
         </p>
     </footer>
 </body>

@@ -1,5 +1,5 @@
 html body {
-    font-size: 36px;
+    font-size: 36px !important;
 }
 
 /*Styling footer*/
@@ -167,4 +167,71 @@ nav.site-navigation {
 
 #header-container {
     margin: 4em 5% 2em 5%;
+}
+
+/*Styling comment form*/
+
+.comment-form {
+    width: 100%;
+}
+
+.post-full-comments-content .comment-form textarea {
+    width: 97%;
+    font-size: 36px;
+}
+
+.post-full-comments-content .comment-form input {
+    width: 70%;
+    font-size: 36px;
+    
+}
+
+/*Styling sidebar*/
+.post-sedebar {
+    display: none;
+}
+
+/*Styling post on post page*/
+
+.post-and-comments {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.post-full-text {
+    font-size: 0.75em;
+}
+
+.related,
+.tags,
+.shared {
+    display: none;
+}
+
+.post-full-attributes-contents {
+    float: none;
+    width: auto;
+}
+
+.post-full-image-content {
+    width: 100%;
+    height: 400px;
+}
+
+.tags-phone,
+.share-phone {
+    display: block;
+}
+
+.tags-phone {
+    margin: 20px 0;
+}
+
+.share-phone {
+    text-align: right;
+}
+
+.share-phone img {
+    width: 60px;
+    margin: 10px; 
 }

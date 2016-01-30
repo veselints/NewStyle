@@ -5,16 +5,15 @@ html body {
 /*Styling footer*/
 
 .footer-content .footer-column {
-    padding: 0.7% 1% 0.7% 0.7%;
-    width: 23%;
+    padding: 1.2% 1.6% 1.2% 1.2%;
+    width: 45%;
     display: inline-block;
 }
-
 
 /*Styling pagination*/
 
 .pagination {
-    width: 90.8%;
+    width: 87.1%;
 }
 
 .pagination a {
@@ -25,17 +24,18 @@ html body {
 /*Styling index page posts*/
 
 .post {
-    width: 14.75%;
-    margin: 0.8%;
+    width: 22.2%;
+    margin: 1.2%;
 }
 
 div.double-column {
-    width: 31.3%;
+    width: 47.3%;
 }
 
 .post-image-content {
     height: 180px;
 }
+
 
 /*Styling credentials*/
 
@@ -69,13 +69,14 @@ nav.site-navigation>ul>li {
 }
 
 nav.site-navigation>ul>li>a {
-    padding: 8px 8px 16px 8px;
+    font-size: 1.3em;
+    padding: 8px 6px;
 }
 
 nav.site-navigation>ul>li>ul.submenu {
     display: none;
     position: absolute;
-    top: 51px;
+    top: 41px;
     padding: 14px 30px 10px 21px;
     z-index: 10;
     background-color: #222222;
@@ -104,11 +105,68 @@ nav.site-navigation>ul>li>ul.submenu {
 /*Styling logo*/
 
 #header-container {
-    margin: 120px 5% 20px 5%;
+    margin: 80px 5% 20px 5%;
 }
 
 #logo {
     width: 420px;
     height: 110px;
     margin-left: 0;
+}
+
+/*Styling comment form*/
+
+.comment-form {
+    width: 100%;
+}
+
+.post-full-comments-content .comment-form textarea {
+    width: 95%;
+}
+
+/*Styling sidebar headers*/
+.post-sedebar h4 {
+    font-size: 1.3em;
+}
+
+.post-sedebar {
+    display: inline-block;
+}
+
+/*Styling post on post page*/
+
+.post-and-comments {
+    width: 72%;
+    margin-left: 0;
+    margin-right: 16px;
+}
+
+.post-full-comments {
+    margin-left: 20%;
+    width: 80%;
+}
+
+.post-full-text {
+    font-size: 0.75em;
+}
+
+.related,
+.tags,
+.shared {
+    display: block;
+}
+
+.post-full-attributes-contents {
+    float: left;
+    width: 196px;
+}
+
+.post-full-image-content {
+    width: 186px;
+    height: 186px;
+}
+
+.tags-phone,
+.share-phone {
+    display: none;
 }
