@@ -183,7 +183,7 @@ nav.site-navigation {
 .post-full-comments-content .comment-form input {
     width: 70%;
     font-size: 36px;
-    
+    padding: 20px;
 }
 
 /*Styling sidebar*/
@@ -234,4 +234,21 @@ nav.site-navigation {
 .share-phone img {
     width: 60px;
     margin: 10px; 
+}
+
+a.reply-btn {
+    padding: 30px;
+}
+
+.comment-image-content {
+    width: 120px;
+    height: 120px;
+}
+
+.comment-avatar-wrapper img {
+    width: 120px;
+}
+
+.comment-text-wrapper {
+    margin-left: 150px;
 }

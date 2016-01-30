@@ -559,8 +559,6 @@ p.tags-tags {
     top: 0;
     border: 4px solid #efefef;
     box-shadow: inset 0 0 5px #3a3a3a;
-    width: 64px;
-    height: 64px;
 }
 
 .comment-avatar-wrapper img {
@@ -583,7 +581,6 @@ p.comment-date {
 
 .comment-text-wrapper {
     display: inline-block;
-    margin-left: 90px;
 }
 
 p.comment-author {
@@ -606,7 +603,6 @@ a.reply-btn {
     display: inline-block;
     color: #6e6e6e;
     margin-top: 10px;
-    padding: 10px;
     text-transform: uppercase;
     background-color: #efefef;
     text-shadow: 1px 1px white;

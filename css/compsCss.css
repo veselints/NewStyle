@@ -170,3 +170,16 @@ nav.site-navigation>ul>li>ul.submenu {
 .share-phone {
     display: none;
 }
+
+a.reply-btn {
+    padding: 10px;
+}
+
+.comment-image-content {
+    width: 64px;
+    height: 64px;
+}
+
+.comment-text-wrapper {
+    margin-left: 90px;
+}
