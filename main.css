@@ -40,7 +40,6 @@ body {
     background: linear-gradient(to right, #1c1d1c, #323232 21.4%, #323232 78.6%, #1c1d1c);
     font-family: DroidSans;
     position: relative;
-    font-size: 16px;
 }
 
 input:focus,

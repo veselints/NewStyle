@@ -1,15 +1,29 @@
+html body {
+    font-size: 16px;
+}
+
 /*Styling footer*/
+
 .footer-content .footer-column {
     padding: 0.7% 1% 0.7% 0.7%;
     width: 23%;
+    display: inline-block;
 }
 
+
 /*Styling pagination*/
+
 .pagination {
     width: 90.8%;
 }
 
+.pagination a {
+    padding: 0 9px;
+}
+
+
 /*Styling index page posts*/
+
 .post {
     width: 14.75%;
     margin: 0.8%;
@@ -19,11 +33,82 @@ div.double-column {
     width: 31.3%;
 }
 
+.post-image-content {
+    height: 180px;
+}
+
+/*Styling credentials*/
+
+.credentials {
+    text-align: right;
+    padding-right: 12%;
+}
+
+.credentials-br {
+    display: none;
+}
+
+.footer .credentials {
+    text-align: center;
+    font-size: 0.75em;
+}
+
+.credentials-separator {
+    display: inline-block;
+}
+
 /*Styling navigation*/
-.navigation-separator {
+
+nav.site-navigation {
+    padding: 0 0.4% 0 0;
+    margin: 19px 1.3% 19px 0.5%;
+}
+
+nav.site-navigation>ul>li {
+    display: inline-block;
+}
+
+nav.site-navigation>ul>li>a {
+    padding: 8px 8px 16px 8px;
+}
+
+nav.site-navigation>ul>li>ul.submenu {
+    display: none;
+    position: absolute;
+    top: 51px;
+    padding: 14px 30px 10px 21px;
+    z-index: 10;
+    background-color: #222222;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.6);
+}
+
+.menu-lable {
+    display: none;
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.search_field {
+	display: inline-block;
+}
+
+.mobile-search {
 	display: none;
 }
 
+/*Styling logo*/
+
 #header-container {
-	margin: 120px 5% 20px 5%;
+    margin: 120px 5% 20px 5%;
+}
+
+#logo {
+    width: 420px;
+    height: 110px;
+    margin-left: 0;
 }

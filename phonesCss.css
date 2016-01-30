@@ -2,7 +2,6 @@ html body {
     font-size: 36px;
 }
 
-
 /*Styling footer*/
 
 .text-in-footer,
@@ -46,7 +45,7 @@ html body {
 
 .credentials {
     text-align: center;
-    font-size: 40%;
+    font-size: 0.75em;
 }
 
 .credentials-separator {
@@ -63,6 +62,8 @@ html body {
 nav.site-navigation>ul>li {
     display: block;
 }
+
+/*Styling navigation*/
 
 nav.site-navigation>ul>li>a {
     padding: .3em .3em .3em 1em;
@@ -157,10 +158,6 @@ nav.site-navigation {
 }
 
 /*Styling logo*/
-
-.navigation-separator {
-    display: none;
-}
 
 #logo {
     width: 14em;

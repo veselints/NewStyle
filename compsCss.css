@@ -2,25 +2,13 @@ html body {
     font-size: 16px;
 }
 
-
 /*Styling footer*/
 
 .footer-content .footer-column {
     padding: 1.2% 1.6% 1.2% 1.2%;
     width: 45%;
     display: inline-block;
-    margin: 0;
 }
-
-.text-in-footer,
-.footer-links {
-    display: block;
-}
-
-.footer-header {
-    text-align: left;
-}
-
 
 /*Styling pagination*/
 
@@ -56,22 +44,22 @@ div.double-column {
     padding-right: 12%;
 }
 
-
-/*Styling post location*/
-
-.post-location {
-    display: block;
+.credentials-br {
+    display: none;
 }
 
-nav.site-navigation {
-    display: block;
-    position: static;
-    font-size: 1em;
+.footer .credentials {
+    text-align: center;
+    font-size: 0.75em;
 }
 
+.credentials-separator {
+    display: inline-block;
+}
+
+/*Styling navigation*/
+
 nav.site-navigation {
-    width: auto;
-    background-color: transparent;
     padding: 0 0.4% 0 0;
     margin: 19px 1.3% 19px 0.5%;
 }
@@ -81,14 +69,15 @@ nav.site-navigation>ul>li {
 }
 
 nav.site-navigation>ul>li>a {
-    padding: 8px 8px 16px 8px;
-    width: auto;
+    font-size: 1.3em;
+    padding: 8px 6px;
 }
 
 nav.site-navigation>ul>li>ul.submenu {
+    display: none;
     position: absolute;
-    top: 51px;
-    padding: 14px 30px 14px 21px;
+    top: 41px;
+    padding: 14px 30px 10px 21px;
     z-index: 10;
     background-color: #222222;
     border-bottom-left-radius: 5px;
@@ -98,8 +87,10 @@ nav.site-navigation>ul>li>ul.submenu {
 }
 
 .menu-lable {
-    position: absolute;
-    left: 0;
+    display: none;
+}
+
+.menu-checkbox {
     display: none;
 }
 
@@ -113,16 +104,12 @@ nav.site-navigation>ul>li>ul.submenu {
 
 /*Styling logo*/
 
-.navigation-separator {
-    position: static;
+#header-container {
+    margin: 80px 5% 20px 5%;
 }
 
 #logo {
     width: 420px;
     height: 110px;
     margin-left: 0;
-}
-
-#header-container {
-    margin: 80px 5% 20px 5%;
 }
