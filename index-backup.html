@@ -541,3 +541,54 @@
 </body>
 
 </html>
+
+
+
+
+<div class="index-page-content-container container">
+    <div id="main-content">
+
+        <div class="post" ng-repeat="project in vm.latestElevenPosts">
+            <div class="post-image-content">
+                <p class="post-category">
+                    {{post.category}}
+                </p>
+                <p class="post-date">
+                    sep
+                    <!-- {{post.createdOn}} -->
+                </p>
+                <p class="post-date">
+                    13
+                    <!-- {{post.createdOn}} -->
+                </p>
+            </div>
+            <a href="#/posts/{{post._id}}">
+                <p class="post-title">
+                    {{post.title}}
+                </p>
+            </a>
+            <p class="post-author">
+                posted by {{post.authorName}}
+            </p>
+            <hr class="post-separator" />
+            <p class="post-summary">
+                {{post.text}} 
+                <!-- This may also be filtered -->
+            </p>
+            <div class="post-bottom">
+            </div>
+        </div>
+
+    </div>
+    <div class="pagination-container">
+        <p class="pagination_go_left"><a href="#">&laquo;</a></p>
+        <p class="pagination">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+        </p>
+        <p class="pagination_go_right"><a href="#">&raquo;</a></p>
+    </div>
+</div>
