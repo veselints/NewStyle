@@ -1,0 +1,65 @@
+<main class="index-page-content-container">
+    <p class="post-location"><a href="#/">Home</a> &raquo; {{vm.subCategory}} </p>
+    <div class="post-results">
+        <div class="post" ng-repeat="post in vm.postsResult">
+            <div class="post-image-content">
+                <p class="post-category">
+                    {{post.category}}
+                </p>
+                <p class="post-date">
+                    sep
+                    <!-- {{post.createdOn}} -->
+                </p>
+                <p class="post-date">
+                    13
+                    <!-- {{post.createdOn}} -->
+                </p>
+            </div>
+            <a href="#/posts/{{post._id}}">
+                <p class="post-title">
+                    {{post.title}}
+                </p>
+            </a>
+            <p class="post-author">
+                posted by {{post.authorName}}
+            </p>
+            <hr class="post-separator" />
+            <p class="post-summary">
+                {{post.text}} 
+                <!-- This may also be filtered -->
+            </p>
+            <div class="post-bottom">
+            </div>
+        </div>
+
+    </div>
+    <aside class="post-sedebar">
+        <div class="aside-nav-wrapper">
+            <div class="aside-bullets">
+                <h4>recent comments</h4>
+                <hr class="post-full-separator" />
+                <ul class="aside-list">
+                    <li ng-repeat="post in vm.latestCommented"><a href="#/posts/{{post._id}}">&raquo; {{post.title}}</a></li>
+                </ul>
+                <div class="aside-bottom"></div>
+            </div>
+            <div class="aside-bullets">
+                <h4>recent posts</h4>
+                <hr class="post-full-separator" />
+                <ul class="aside-list">
+                    <li ng-repeat="post in vm.latestSevenPosts"><a href="#/posts/{{post._id}}">&raquo; {{post.title}}</a></li>
+                </ul>
+                <div class="aside-bottom"></div>
+            </div>
+        </div>
+    </aside>
+    <div class="pagination-container" ng-show="vm.showPagination">
+        <p class="pagination_go_left"><a href="#/results/{{vm.subCategory}}?page={{vm.previousPage}}">&laquo;</a></p>
+        <p class="pagination">
+            <span ng-repeat="page in vm.pages">
+                <a href="#/results/{{page.query}}?page={{page.num}}" class="{{page.selected}}">{{page.num}}</a>
+            </span>
+        </p>
+        <p class="pagination_go_right"><a href="#/results/{{vm.subCategory}}?page={{vm.nextPage}}">&raquo;</a></p>
+    </div>
+</main>

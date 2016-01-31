@@ -11,6 +11,21 @@
             controller: 'HomeController',
             controllerAs: CONTROLLER_AS_VM
         })
+        .when('/posts/:id', {
+            templateUrl: PARTIALS_PREFIX + 'post.html',
+            controller: 'PostController',
+            controllerAs: CONTROLLER_AS_VM
+        })
+        .when('/results/:query', {
+            templateUrl: PARTIALS_PREFIX + 'results.html',
+            controller: 'ResultsController',
+            controllerAs: CONTROLLER_AS_VM
+        })
+        .when('/category/:category', {
+            templateUrl: PARTIALS_PREFIX + 'results.html',
+            controller: 'CategoryController',
+            controllerAs: CONTROLLER_AS_VM
+        })
         .otherwise({ redirectTo: '/' });
     }
 

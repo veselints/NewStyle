@@ -1,4 +1,4 @@
-(function () {
+(function() {
     'use strict';
 
     function posts(data) {
@@ -26,6 +26,18 @@
             return data.get('posts/bysubcategory/' + subcategory);
         }
 
+        function getByQuery(query, pageNumber) {
+
+            switch (query) {
+                case 'lastcommented':
+                    return data.get('posts/commented?page=' + pageNumber);
+                case 'lastarchived':
+                    return data.get('posts/archived?page=' + pageNumber);
+                default:
+                    return data.get('posts/query/' + query + '?page=' + pageNumber);
+            }
+        }
+
         function getById(id) {
             return data.get('posts/' + id);
         }
@@ -37,7 +49,8 @@
             getLatestArchived: getLatestArchived,
             getCount: getCount,
             getBySubcategory: getBySubcategory,
-            getById: getById
+            getById: getById,
+            getByQuery: getByQuery
         };
     }
 

@@ -6,22 +6,7 @@
 
         posts.getLatest()
             .then(function(postsResult) {
-                vm.latestElevenPosts = postsResult;
-            });
-
-        posts.getLatestCommented()
-            .then(function(postsResult) {
-                vm.latestCommented = postsResult;
-            });
-
-        posts.getLatestSeven()
-            .then(function(postsResult) {
-                vm.latestSevenPosts = postsResult;
-            });
-
-        posts.getLatestArchived()
-            .then(function(postsResult) {
-                vm.latestArchived = postsResult;
+                vm.latestElevenPosts = postsResult.posts;
             });
     }
 
