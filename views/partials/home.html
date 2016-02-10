@@ -3,6 +3,9 @@
     <div id="main-content">
 
         <div class="post" ng-repeat="post in vm.latestElevenPosts">
+            <div class="post-home-image">
+                <img class="post-image" src="{{post.picture}}" alt="picture">
+            </div>
             <div class="post-image-content">
                 <p class="post-category">
                     {{post.category}}

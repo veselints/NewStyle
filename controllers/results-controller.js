@@ -10,6 +10,8 @@
         posts.getByQuery(currentQuery, pageNumber)
             .then(function(postsResult) {
                 vm.postsResult = postsResult.posts;
+                vm.commented = postsResult.commented;
+                vm.posted = postsResult.posted;
                 var numberOfPosts = postsResult.count;
 
                 var currentNumberOfPages = Math.floor(numberOfPosts / 7);
@@ -53,16 +55,6 @@
                 }
 
                 vm.subCategory = currentQuery;
-            });
-
-        posts.getLatestCommented()
-            .then(function(postsResult) {
-                vm.latestCommented = postsResult;
-            });
-
-        posts.getLatestSeven()
-            .then(function(postsResult) {
-                vm.latestSevenPosts = postsResult;
             });
     }
 

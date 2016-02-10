@@ -37,7 +37,8 @@ html body {
     margin-bottom: 25px;
 }
 
-.post-image-content {
+.post-image-content,
+.post-home-image {
     height: 360px;
 }
 
@@ -256,4 +257,19 @@ a.reply-btn {
 
 .comment-text-wrapper {
     margin-left: 150px;
+}
+
+.post-full-image {
+    width: 100%;
+    height: 400px;
+}
+
+/*Styling posts results page*/
+.post-results .post {
+    width: 96%;
+    margin: 2%;
+}
+.index-page-content-container .post-results div.doubleCol {
+    width: 96%;
+    margin: 2%;
 }

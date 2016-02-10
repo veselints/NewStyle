@@ -6,17 +6,17 @@
             return data.get('posts/latest');
         }
 
-        function getLatestCommented() {
-            return data.get('posts/latestcommented');
-        }
+        // function getLatestCommented() {
+        //     return data.get('posts/latestcommented');
+        // }
 
         function getLatestSeven() {
             return data.get('posts/latestseven');
         }
 
-        function getLatestArchived() {
-            return data.get('posts/latestarchived');
-        }
+        // function getLatestArchived() {
+        //     return data.get('posts/latestarchived');
+        // }
 
         function getCount() {
             return data.get('posts/count');
@@ -27,7 +27,6 @@
         }
 
         function getByQuery(query, pageNumber) {
-
             switch (query) {
                 case 'lastcommented':
                     return data.get('posts/commented?page=' + pageNumber);
@@ -44,9 +43,7 @@
 
         return {
             getLatest: getLatest,
-            getLatestCommented: getLatestCommented,
             getLatestSeven: getLatestSeven,
-            getLatestArchived: getLatestArchived,
             getCount: getCount,
             getBySubcategory: getBySubcategory,
             getById: getById,

@@ -1,7 +1,10 @@
 <main class="index-page-content-container">
     <p class="post-location"><a href="#/">Home</a> &raquo; {{vm.subCategory}} </p>
     <div class="post-results">
-        <div class="post" ng-repeat="post in vm.postsResult">
+        <div class="post" ng-repeat="post in vm.postsResult" ng-class="{doubleCol: $index==1}">
+            <div class="post-home-image">
+                <img class="post-image" src="{{post.picture}}" alt="picture">
+            </div>
             <div class="post-image-content">
                 <p class="post-category">
                     {{post.category}}
@@ -39,7 +42,7 @@
                 <h4>recent comments</h4>
                 <hr class="post-full-separator" />
                 <ul class="aside-list">
-                    <li ng-repeat="post in vm.latestCommented"><a href="#/posts/{{post._id}}">&raquo; {{post.title}}</a></li>
+                    <li ng-repeat="post in vm.commented"><a href="#/posts/{{post._id}}">&raquo; {{post.title}}</a></li>
                 </ul>
                 <div class="aside-bottom"></div>
             </div>
@@ -47,7 +50,7 @@
                 <h4>recent posts</h4>
                 <hr class="post-full-separator" />
                 <ul class="aside-list">
-                    <li ng-repeat="post in vm.latestSevenPosts"><a href="#/posts/{{post._id}}">&raquo; {{post.title}}</a></li>
+                    <li ng-repeat="post in vm.posted"><a href="#/posts/{{post._id}}">&raquo; {{post.title}}</a></li>
                 </ul>
                 <div class="aside-bottom"></div>
             </div>

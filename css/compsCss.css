@@ -28,11 +28,12 @@ html body {
     margin: 1.2%;
 }
 
-div.double-column {
+div.doubleCol {
     width: 47.3%;
 }
 
-.post-image-content {
+.post-image-content,
+.post-home-image {
     height: 180px;
 }
 
@@ -182,4 +183,18 @@ a.reply-btn {
 
 .comment-text-wrapper {
     margin-left: 90px;
+}
+
+.post-full-image {
+    width: 186px;
+    height: 186px;
+}
+
+/*Styling posts results page*/
+.post-results .post {
+    width: 28.1%;
+    margin: 1%;
+}
+.index-page-content-container .post-results div.doubleCol {
+    width: 57.9%;
 }

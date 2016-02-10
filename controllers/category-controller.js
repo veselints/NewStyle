@@ -45,6 +45,8 @@
             .then(function(postsResult) {
                 vm.postsResult = postsResult.posts;
                 vm.subCategory = categories[currentCategory];
+                vm.commented = postsResult.commented;
+                vm.posted = postsResult.posted;
 
                 debugger;
 
@@ -89,16 +91,6 @@
                 } else {
                     vm.nextPage = currentNumberOfPages;
                 }
-            });
-
-        posts.getLatestCommented()
-            .then(function(postsResult) {
-                vm.latestCommented = postsResult;
-            });
-
-        posts.getLatestSeven()
-            .then(function(postsResult) {
-                vm.latestSevenPosts = postsResult;
             });
     }
 

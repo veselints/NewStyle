@@ -1,8 +1,11 @@
 <main class="post-page-content-container container">
-    <p class="post-location"><a href="#/">Home</a> &raquo; <a href="#/category/{{vm.post.subCategory}}">{{vm.post.subCategory}}</a> &raquo; Post Title Goes here</p>
+    <p class="post-location"><a href="#/">Home</a> &raquo; <a href="#/category/{{vm.post.subCategory}}">{{vm.post.subCategory}}</a> &raquo; {{vm.post.title}}</p>
     <article class="post-and-comments">
         <div class="post-full-content">
             <div class="post-full-attributes-contents">
+                <div class="post-full-image">
+                    <img class="post-image" src="{{vm.post.picture}}" alt="picture">
+                </div>
                 <div class="post-full-image-content">
                     <p class="post-category">
                         {{vm.post.category}}
@@ -25,15 +28,15 @@
                 <div class="related">
                     <h4>related posts</h4>
                     <ul class="related-contents">
-                        <li ng-repeat="related in vm.post.relatedPosts"> <a href="#/posts/{{related._id}}">&raquo; {{related.title}}</a> </li>
+                        <li ng-repeat="related in vm.relatedThree"> <a href="#/posts/{{related._id}}">&raquo; {{related.title}}</a> </li>
                     </ul>
                 </div>
                 <div class="shared">
                     <h4>share this</h4>
                     <div class="share-contents">
-                        <a href="#"><img src="./img/twetterLogo.png" alt="twetter"></a>
+                        <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank"><img src="./img/twetterLogo.png" alt="twetter"></a>
                         <a href="#"><img src="./img/facebookLogo.png" alt="facebook"></a>
-                        <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank"><img src="./img/thirdLogo.png" alt="dontknow"></a>
+                        <a href="#"><img src="./img/thirdLogo.png" alt="dontknow"></a>
                         <a href="#"><img src="./img/diggLogo.png" alt="digg"></a>
                         <a href="#"><img src="./img/fifthLogo.png" alt="what"></a>
                     </div>
@@ -45,7 +48,6 @@
                 </p>
                 <p class="post-full-author">
                     POSTED BY {{vm.post.authorName}} IN {{vm.post.category}} | {{vm.post.numberOfComments}} COMMENTS
-                    
                 </p>
                 <div class="tags-phone">
                     <p class="tags-tags" ng-repeat="tag in vm.post.tags">{{tag}}</p>
@@ -55,7 +57,7 @@
                     {{vm.post.text}}
                 </p>
                 <div class="share-phone">
-                    <a href="#"><img src="./img/twetterLogo.png" alt="twetter"></a>
+                    <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank"><img src="./img/twetterLogo.png" alt="twetter"></a>
                     <a href="#"><img src="./img/facebookLogo.png" alt="facebook"></a>
                     <a href="#"><img src="./img/thirdLogo.png" alt="dontknow"></a>
                     <a href="#"><img src="./img/diggLogo.png" alt="digg"></a>
@@ -77,9 +79,11 @@
                             <img src="./img/avatar.jpg" alt="">
                             <div class="comment-image-content">
                                 <p class="comment-date">
+                                    <!-- todo later -->
                                     sep
                                 </p>
                                 <p class="comment-date">
+                                    <!-- todo later -->
                                     13
                                 </p>
                             </div>
@@ -89,6 +93,7 @@
                             <p class="comment-text">{{comment.text}}</p>
                         </div>
                         <div class="reply-btn-container">
+                            <!-- todo later -->
                             <a class="reply-btn" href="#">reply</a>
                         </div>
                     </div>
@@ -102,6 +107,7 @@
                     <input type="text" name="topi" placeholder="Topic">
                     <textarea name="commentText" rows="10"></textarea>
                     <div class="reply-btn-container">
+                        <!-- todo later -->
                         <a class="reply-btn" href="#">submit</a>
                     </div>
                 </form>
@@ -112,50 +118,49 @@
     </article>
     <aside class="post-sedebar">
         <div class="aside-tabs">
-            <a href="#"><h4>recent</h4></a><a href="#"><h4>popular</h4></a><a href="#"><h4>random</h4></a>
-            <div class="aside-link-to-post">
-                <img src="./img/miniAvatar.jpg" alt="">
-                <div class="aside-link-to-post-texts">
-                    <p class="title">Fusce suscipit sapien sit amet</p>
-                    <p class="author">Posted by Admin on Mar 13</p>
+            <a href="" class="recentHeader"><h4>recent</h4></a><a href="" class="popularHeader"><h4>popular</h4></a><a href=""  class="randomHeader"><h4>random</h4></a>
+            <div class="aside-tabs-recent">
+                <div ng-repeat="recent in vm.recentFour" class="aside-link-to-post">
+                    <!-- TODO: fix image -->
+                    <img src="./img/miniAvatar.jpg" alt="">
+                    <div class="aside-link-to-post-texts">
+                        <p class="title">{{recent.title}}</p>
+                        <!-- TODO: Fix date!!! -->
+                        <p class="author">Posted by {{recent.authorName}} on {{recent.createdOn}}</p>
+                    </div>
                 </div>
+                <div class="aside-bottom"></div>
             </div>
-            <hr class="post-full-separator" />
-            <div class="aside-link-to-post">
-                <img src="./img/miniAvatar.jpg" alt="">
-                <div class="aside-link-to-post-texts">
-                    <p class="title">Fusce suscipit sapien sit amet</p>
-                    <p class="author">Posted by Admin on Mar 13</p>
+            <div class="aside-tabs-popular" style="display:none;">
+                <div ng-repeat="popular in vm.popularFour" class="aside-link-to-post">
+                    <!-- TODO: fix image -->
+                    <img src="./img/miniAvatar.jpg" alt="">
+                    <div class="aside-link-to-post-texts">
+                        <p class="title">{{popular.title}}</p>
+                        <!-- TODO: Fix date!!! -->
+                        <p class="author">Posted by {{popular.authorName}} on {{popular.createdOn}}</p>
+                    </div>
                 </div>
+                <div class="aside-bottom"></div>
             </div>
-            <hr class="post-full-separator" />
-            <div class="aside-link-to-post">
-                <img src="./img/miniAvatar.jpg" alt="">
-                <div class="aside-link-to-post-texts">
-                    <p class="title">Fusce suscipit sapien sit amet</p>
-                    <p class="author">Posted by Admin on Mar 13</p>
+            <div class="aside-tabs-random" style="display:none;">
+                <div ng-repeat="random in vm.randomFour" class="aside-link-to-post">
+                    <!-- TODO: fix image -->
+                    <img src="./img/miniAvatar.jpg" alt="">
+                    <div class="aside-link-to-post-texts">
+                        <p class="title">{{random.title}}</p>
+                        <!-- TODO: Fix date!!! -->
+                        <p class="author">Posted by {{random.authorName}} on {{random.createdOn}}</p>
+                    </div>
                 </div>
+                <div class="aside-bottom"></div>
             </div>
-            <hr class="post-full-separator" />
-            <div class="aside-link-to-post">
-                <img src="./img/miniAvatar.jpg" alt="">
-                <div class="aside-link-to-post-texts">
-                    <p class="title">Fusce suscipit sapien sit amet</p>
-                    <p class="author">Posted by Admin on Mar 13</p>
-                </div>
-            </div>
-            <div class="aside-bottom"></div>
         </div>
         <div class="aside-bullets">
             <h4>CUSTOM bullet WIDGET</h4>
             <hr class="post-full-separator" />
             <ul class="aside-list">
-                <li><a href="#">&raquo; Fusce suscipit sapien sit amet </a></li>
-                <li><a href="#">&raquo; Sapien placerat ultrices</a></li>
-                <li><a href="#">&raquo; Vivamus sed massa ac metus gravida</a></li>
-                <li><a href="#">&raquo; Dignissim egestas posuere lorem</a></li>
-                <li><a href="#">&raquo; Sed ipsum urna, facilisis quis eleifend</a></li>
-                <li><a href="#">&raquo; Sodales sed lectus integer felis eu</a></li>
+                <li ng-repeat="sub in vm.subcategories"><a href="#/category/{{sub}}?page=1">&raquo; {{sub}} </a></li>
             </ul>
             <div class="aside-bottom"></div>
         </div>
@@ -166,4 +171,26 @@
             <div class="aside-bottom"></div>
         </div>
     </aside>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.recentHeader').on('click', function() {
+                $('.aside-tabs-recent').css('display', 'block');
+                $('.aside-tabs-popular').css('display', 'none');
+                $('.aside-tabs-random').css('display', 'none');
+            });
+
+            $('.popularHeader').on('click', function() {
+                $('.aside-tabs-recent').css('display', 'none');
+                $('.aside-tabs-popular').css('display', 'block');
+                $('.aside-tabs-random').css('display', 'none');
+            });
+
+            $('.randomHeader').on('click', function() {
+                $('.aside-tabs-recent').css('display', 'none');
+                $('.aside-tabs-popular').css('display', 'none');
+                $('.aside-tabs-random').css('display', 'block');
+            });
+        });
+    </script>
 </main>
