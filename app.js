@@ -22,7 +22,7 @@
             controllerAs: CONTROLLER_AS_VM
         })
         .when('/category/:category', {
-            templateUrl: PARTIALS_PREFIX + 'results.html',
+            templateUrl: PARTIALS_PREFIX + 'categories.html',
             controller: 'CategoryController',
             controllerAs: CONTROLLER_AS_VM
         })
@@ -36,5 +36,6 @@
 
     angular.module('theStyleApp', ['ngRoute', 'ngCookies', 'theStyleApp.controllers', 'theStyleApp.directives']) //'theStyleApp.filters'
         .config(['$routeProvider', config])
-        .constant('baseServiceUrl', 'https://fast-badlands-79260.herokuapp.com/api/'); // Chage this when you migrate to heroku
+        .constant('baseServiceUrl', 'http://localhost:7777/api/'); // Chage this when you migrate to heroku
+        //.constant('baseServiceUrl', 'https://fast-badlands-79260.herokuapp.com/api/'); // Chage this when you migrate to heroku
 }());

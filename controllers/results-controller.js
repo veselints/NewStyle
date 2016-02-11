@@ -6,6 +6,7 @@
         var currentQuery = $routeParams.query;
         var locationObject = $location.search();
         var pageNumber = Number(locationObject.page) || 1;
+        
 
         posts.getByQuery(currentQuery, pageNumber)
             .then(function(postsResult) {
@@ -54,7 +55,7 @@
                     vm.nextPage = currentNumberOfPages;
                 }
 
-                vm.subCategory = currentQuery;
+                vm.currentQuery = currentQuery;
             });
     }
 

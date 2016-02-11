@@ -118,7 +118,7 @@
     </article>
     <aside class="post-sedebar">
         <div class="aside-tabs">
-            <a href="" class="recentHeader"><h4>recent</h4></a><a href="" class="popularHeader"><h4>popular</h4></a><a href=""  class="randomHeader"><h4>random</h4></a>
+            <a href="" class="recentHeader"><h4 class="recentHeaderHeader">recent</h4></a><a href="" class="popularHeader"><h4 class="popularHeaderHeader">popular</h4></a><a href=""  class="randomHeader"><h4 class="randomHeaderHeader">random</h4></a>
             <div class="aside-tabs-recent">
                 <div ng-repeat="recent in vm.recentFour" class="aside-link-to-post">
                     <!-- TODO: fix image -->
@@ -178,18 +178,30 @@
                 $('.aside-tabs-recent').css('display', 'block');
                 $('.aside-tabs-popular').css('display', 'none');
                 $('.aside-tabs-random').css('display', 'none');
+
+                $('.recentHeaderHeader').css('background-color', '#e7e7e7');
+                $('.popularHeaderHeader').css('background-color', '#d6d6d6');
+                $('.randomHeaderHeader').css('background-color', '#d6d6d6');
             });
 
             $('.popularHeader').on('click', function() {
                 $('.aside-tabs-recent').css('display', 'none');
                 $('.aside-tabs-popular').css('display', 'block');
                 $('.aside-tabs-random').css('display', 'none');
+
+                $('.recentHeaderHeader').css('background-color', '#d6d6d6');
+                $('.popularHeaderHeader').css('background-color', '#e7e7e7');
+                $('.randomHeaderHeader').css('background-color', '#d6d6d6');
             });
 
             $('.randomHeader').on('click', function() {
                 $('.aside-tabs-recent').css('display', 'none');
                 $('.aside-tabs-popular').css('display', 'none');
                 $('.aside-tabs-random').css('display', 'block');
+
+                $('.recentHeaderHeader').css('background-color', '#d6d6d6');
+                $('.popularHeaderHeader').css('background-color', '#d6d6d6');
+                $('.randomHeaderHeader').css('background-color', '#e7e7e7');
             });
         });
     </script>

@@ -57,12 +57,12 @@
         </div>
     </aside>
     <div class="pagination-container" ng-show="vm.showPagination">
-        <p class="pagination_go_left"><a href="#/results/{{vm.currentQuery}}?page={{vm.previousPage}}">&laquo;</a></p>
+        <p class="pagination_go_left"><a href="#/category/{{vm.subCategory}}?page={{vm.previousPage}}">&laquo;</a></p>
         <p class="pagination">
             <span ng-repeat="page in vm.pages">
-                <a href="#/results/{{page.query}}?page={{page.num}}" class="{{page.selected}}">{{page.num}}</a>
+                <a href="#/category/{{page.query}}?page={{page.num}}" class="{{page.selected}}">{{page.num}}</a>
             </span>
         </p>
-        <p class="pagination_go_right"><a href="#/results/{{vm.currentQuery}}?page={{vm.nextPage}}">&raquo;</a></p>
+        <p class="pagination_go_right"><a href="#/category/{{vm.subCategory}}?page={{vm.nextPage}}">&raquo;</a></p>
     </div>
 </main>

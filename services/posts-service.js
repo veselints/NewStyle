@@ -22,8 +22,8 @@
             return data.get('posts/count');
         }
 
-        function getBySubcategory(subcategory) {
-            return data.get('posts/bysubcategory/' + subcategory);
+        function getBySubcategory(subcategory, page) {
+            return data.get('posts/bysubcategory/' + subcategory + '?page=' + page);
         }
 
         function getByQuery(query, pageNumber) {

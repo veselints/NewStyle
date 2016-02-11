@@ -63,6 +63,7 @@ button:focus {
     display: inline-block;
 }
 
+
 /*Styling navigation*/
 
 nav.site-navigation>ul {
@@ -120,6 +121,10 @@ nav.site-navigation>ul>li>ul.submenu a:active {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
+}
+
+.search-submit {
+    cursor: pointer;
 }
 
 .search_field {
@@ -267,7 +272,7 @@ p.post-summary {
 
 .pagination-container {
     width: 99%;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 0 auto;
     text-align: center;
 }
 
@@ -330,6 +335,7 @@ p.post-summary {
     background: linear-gradient(to right, #191919, #2c2c2c 21.4%, #2c2c2c 78.6%, #191919);
     border-top: 1px solid #4a4a4a;
     box-shadow: 0 -1px 1px black;
+    margin-top: 30px;
 }
 
 .footer-content {
@@ -631,7 +637,6 @@ a.reply-btn {
     background-color: #f6f6f6;
     box-shadow: inset 1px 1px 3px #d6d6d6;
     padding: 10px;
-    
 }
 
 .comment-form input {
@@ -650,6 +655,7 @@ a.reply-btn {
     display: inline-block;
     width: 20.2%;
     vertical-align: top;
+    height: 600px;
 }
 
 .post-sedebar .aside-tabs,
@@ -794,8 +800,6 @@ p.post-location a:hover {
     margin: 0 5px;
 }
 
-
-
 .index-page-content-container .post-sedebar {
     width: 20%;
     position: relative;
@@ -813,14 +817,14 @@ p.post-location a:hover {
     padding-top: 10px;
 }
 
-
-
 .index-page-content-container .post-results div.doubleCol .post-image-content {
     margin: 0.7%;
     width: 98.6%;
 }
 
+
 /*styling pictures*/
+
 .post-full-image .post-image,
 .post-home-image .post-image {
     display: block;
@@ -837,3 +841,14 @@ p.post-location a:hover {
 .post-home-image {
     position: absolute;
 }
+
+.post-sedebar:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+

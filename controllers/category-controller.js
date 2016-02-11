@@ -40,11 +40,12 @@
         var currentCategory = $routeParams.category;
         var locationObject = $location.search();
         var pageNumber = Number(locationObject.page) || 1;
+        debugger;
 
-        posts.getBySubcategory(currentCategory)
+        posts.getBySubcategory(currentCategory, pageNumber)
             .then(function(postsResult) {
                 vm.postsResult = postsResult.posts;
-                vm.subCategory = categories[currentCategory];
+                vm.subCategory = currentCategory;
                 vm.commented = postsResult.commented;
                 vm.posted = postsResult.posted;
 

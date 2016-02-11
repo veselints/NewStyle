@@ -192,9 +192,9 @@ a.reply-btn {
 
 /*Styling posts results page*/
 .post-results .post {
-    width: 28.1%;
+    width: 43.1%;
     margin: 1%;
 }
 .index-page-content-container .post-results div.doubleCol {
-    width: 57.9%;
+    width: 88%;
 }
