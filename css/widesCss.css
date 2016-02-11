@@ -179,6 +179,11 @@ a.reply-btn {
     height: 64px;
 }
 
+.comment-image-image {
+    width: 64px;
+    height: 64px;
+}
+
 .comment-text-wrapper {
     margin-left: 90px;
 }

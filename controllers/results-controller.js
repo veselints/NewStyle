@@ -15,6 +15,10 @@
                 vm.posted = postsResult.posted;
                 var numberOfPosts = postsResult.count;
 
+                if (numberOfPosts == 0) {
+                    vm.noresults = true;
+                }
+
                 var currentNumberOfPages = Math.floor(numberOfPosts / 7);
                 if (numberOfPosts % 7 !== 0) {
                     currentNumberOfPages++;

@@ -11,12 +11,10 @@
                         {{vm.post.category}}
                     </p>
                     <p class="post-date">
-                        sep
-                        <!-- todo later -->
+                        {{ vm.post.createdOn | monthFilter }}
                     </p>
                     <p class="post-date">
-                        13
-                        <!-- todo later -->
+                        {{ vm.post.createdOn | dayFilter }}
                     </p>
                 </div>
                 <div class="tags">
@@ -73,18 +71,16 @@
                     {{vm.post.numberOfComments}} comments
                 </p>
                 <hr class="post-full-separator" />
-                <div ng-repeat="comment in vm.post.comments">
+                <div ng-repeat="comment in vm.post.comments" ng-class="{nested: comment.nested == true}">
                     <div class="comment">
                         <div class="comment-avatar-wrapper">
-                            <img src="./img/avatar.jpg" alt="">
+                            <img class="comment-image-image" src="{{comment.avatar}}" alt="avatar">
                             <div class="comment-image-content">
                                 <p class="comment-date">
-                                    <!-- todo later -->
-                                    sep
+                                    {{ comment.createdOn | monthFilter }}
                                 </p>
                                 <p class="comment-date">
-                                    <!-- todo later -->
-                                    13
+                                    {{ comment.createdOn | dayFilter }}
                                 </p>
                             </div>
                         </div>
@@ -93,8 +89,8 @@
                             <p class="comment-text">{{comment.text}}</p>
                         </div>
                         <div class="reply-btn-container">
-                            <!-- todo later -->
-                            <a class="reply-btn" href="#">reply</a>
+                            <button class="reply-btn"  ng-hide="comment.nested" ng-click="vm.setParentComment($index)">reply</button>
+                            <span class="reply-btn"  ng-show="comment.nested"> ^ </span>
                         </div>
                     </div>
                     <hr class="post-full-separator" />
@@ -102,13 +98,12 @@
                 <p class="post-full-title">
                     leave a comment
                 </p>
-                <form class="comment-form" action="post_submit" method="post" accept-charset="utf-8">
-                    <input type="text" name="username" placeholder="Your username">
-                    <input type="text" name="topi" placeholder="Topic">
-                    <textarea name="commentText" rows="10"></textarea>
+                <form name="postCommentForm" class="comment-form" accept-charset="utf-8">
+                    <input type="text" ng-model="comment.authorName" required="required" id="authorName" placeholder="Your name">
+                    <input type="url" ng-model="comment.avatar" required="required" id="avatar" placeholder="Avatar URL">
+                    <textarea ng-model="comment.text" required="required" id="text" rows="10"></textarea>
                     <div class="reply-btn-container">
-                        <!-- todo later -->
-                        <a class="reply-btn" href="#">submit</a>
+                        <button class="reply-btn" ng-disabled="postCommentForm.$invalid" ng-click="vm.addComment(comment)">submit</button>
                     </div>
                 </form>
             </div>
@@ -118,7 +113,7 @@
     </article>
     <aside class="post-sedebar">
         <div class="aside-tabs">
-            <a href="" class="recentHeader"><h4 class="recentHeaderHeader">recent</h4></a><a href="" class="popularHeader"><h4 class="popularHeaderHeader">popular</h4></a><a href=""  class="randomHeader"><h4 class="randomHeaderHeader">random</h4></a>
+            <a href="" class="recentHeader"><h4 class="recentHeaderHeader">recent</h4></a><a href="" class="popularHeader"><h4 class="popularHeaderHeader">popular</h4></a><a href="" class="randomHeader"><h4 class="randomHeaderHeader">random</h4></a>
             <div class="aside-tabs-recent">
                 <div ng-repeat="recent in vm.recentFour" class="aside-link-to-post">
                     <!-- TODO: fix image -->
@@ -171,38 +166,37 @@
             <div class="aside-bottom"></div>
         </div>
     </aside>
-
     <script type="text/javascript">
-        $(document).ready(function(){
-            $('.recentHeader').on('click', function() {
-                $('.aside-tabs-recent').css('display', 'block');
-                $('.aside-tabs-popular').css('display', 'none');
-                $('.aside-tabs-random').css('display', 'none');
+    $(document).ready(function() {
+        $('.recentHeader').on('click', function() {
+            $('.aside-tabs-recent').css('display', 'block');
+            $('.aside-tabs-popular').css('display', 'none');
+            $('.aside-tabs-random').css('display', 'none');
 
-                $('.recentHeaderHeader').css('background-color', '#e7e7e7');
-                $('.popularHeaderHeader').css('background-color', '#d6d6d6');
-                $('.randomHeaderHeader').css('background-color', '#d6d6d6');
-            });
-
-            $('.popularHeader').on('click', function() {
-                $('.aside-tabs-recent').css('display', 'none');
-                $('.aside-tabs-popular').css('display', 'block');
-                $('.aside-tabs-random').css('display', 'none');
-
-                $('.recentHeaderHeader').css('background-color', '#d6d6d6');
-                $('.popularHeaderHeader').css('background-color', '#e7e7e7');
-                $('.randomHeaderHeader').css('background-color', '#d6d6d6');
-            });
-
-            $('.randomHeader').on('click', function() {
-                $('.aside-tabs-recent').css('display', 'none');
-                $('.aside-tabs-popular').css('display', 'none');
-                $('.aside-tabs-random').css('display', 'block');
-
-                $('.recentHeaderHeader').css('background-color', '#d6d6d6');
-                $('.popularHeaderHeader').css('background-color', '#d6d6d6');
-                $('.randomHeaderHeader').css('background-color', '#e7e7e7');
-            });
+            $('.recentHeaderHeader').css('background-color', '#e7e7e7');
+            $('.popularHeaderHeader').css('background-color', '#d6d6d6');
+            $('.randomHeaderHeader').css('background-color', '#d6d6d6');
         });
+
+        $('.popularHeader').on('click', function() {
+            $('.aside-tabs-recent').css('display', 'none');
+            $('.aside-tabs-popular').css('display', 'block');
+            $('.aside-tabs-random').css('display', 'none');
+
+            $('.recentHeaderHeader').css('background-color', '#d6d6d6');
+            $('.popularHeaderHeader').css('background-color', '#e7e7e7');
+            $('.randomHeaderHeader').css('background-color', '#d6d6d6');
+        });
+
+        $('.randomHeader').on('click', function() {
+            $('.aside-tabs-recent').css('display', 'none');
+            $('.aside-tabs-popular').css('display', 'none');
+            $('.aside-tabs-random').css('display', 'block');
+
+            $('.recentHeaderHeader').css('background-color', '#d6d6d6');
+            $('.popularHeaderHeader').css('background-color', '#d6d6d6');
+            $('.randomHeaderHeader').css('background-color', '#e7e7e7');
+        });
+    });
     </script>
 </main>

@@ -40,7 +40,6 @@
         var currentCategory = $routeParams.category;
         var locationObject = $location.search();
         var pageNumber = Number(locationObject.page) || 1;
-        debugger;
 
         posts.getBySubcategory(currentCategory, pageNumber)
             .then(function(postsResult) {
@@ -48,10 +47,12 @@
                 vm.subCategory = currentCategory;
                 vm.commented = postsResult.commented;
                 vm.posted = postsResult.posted;
-
-                debugger;
-
+                
                 var numberOfPosts = postsResult.count;
+
+                if (numberOfPosts == 0) {
+                    vm.noresults = true;
+                }
 
                 var currentNumberOfPages = Math.floor(numberOfPosts / 7);
                 if (numberOfPosts % 7 !== 0) {

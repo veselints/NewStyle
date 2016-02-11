@@ -2,7 +2,7 @@
     <p class="post-location"><a href="#">Home</a></p>
     <div id="main-content">
 
-        <div class="post" ng-repeat="post in vm.latestElevenPosts">
+        <div class="post" ng-repeat="post in vm.latestElevenPosts" ng-class="{doubleCol: $index==2}">
             <div class="post-home-image">
                 <img class="post-image" src="{{post.picture}}" alt="picture">
             </div>
@@ -11,12 +11,10 @@
                     {{post.category}}
                 </p>
                 <p class="post-date">
-                    sep
-                    <!-- {{post.createdOn}} -->
+                    {{ post.createdOn | monthFilter }}
                 </p>
                 <p class="post-date">
-                    13
-                    <!-- {{post.createdOn}} -->
+                    {{ post.createdOn | dayFilter }}
                 </p>
             </div>
             <a href="#/posts/{{post._id}}">
@@ -37,15 +35,14 @@
         </div>
 
     </div>
+
     <div class="pagination-container">
-        <p class="pagination_go_left"><a href="#">&laquo;</a></p>
+        <p class="pagination_go_left"><a href="#/?page={{vm.previousPage}}">&laquo;</a></p>
         <p class="pagination">
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
+            <span ng-repeat="page in vm.pages">
+                <a href="#/?page={{page.num}}" class="{{page.selected}}">{{page.num}}</a>
+            </span>
         </p>
-        <p class="pagination_go_right"><a href="#">&raquo;</a></p>
+        <p class="pagination_go_right"><a href="#/?page={{vm.nextPage}}">&raquo;</a></p>
     </div>
 </div>

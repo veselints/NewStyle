@@ -251,6 +251,11 @@ a.reply-btn {
     height: 120px;
 }
 
+.comment-image-image {
+    width: 120px;
+    height: 120px;
+}
+
 .comment-avatar-wrapper img {
     width: 120px;
 }

@@ -7,7 +7,6 @@
                 $scope.latestSevenPosts = result.posted;
                 $scope.latestArchived = result.archived;
                 $scope.latestCommented = result.commented;
-                debugger;
             });
     }
 

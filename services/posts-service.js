@@ -2,21 +2,13 @@
     'use strict';
 
     function posts(data) {
-        function getLatest() {
-            return data.get('posts/latest');
+        function getLatest(page) {
+            return data.get('posts/latest' + '?page=' + page);
         }
-
-        // function getLatestCommented() {
-        //     return data.get('posts/latestcommented');
-        // }
-
+        
         function getLatestSeven() {
             return data.get('posts/latestseven');
         }
-
-        // function getLatestArchived() {
-        //     return data.get('posts/latestarchived');
-        // }
 
         function getCount() {
             return data.get('posts/count');
@@ -41,13 +33,18 @@
             return data.get('posts/' + id);
         }
 
+        function createNewComment(comment, currentId) {
+            return data.post('posts/' + currentId, comment);
+        }
+
         return {
             getLatest: getLatest,
             getLatestSeven: getLatestSeven,
             getCount: getCount,
             getBySubcategory: getBySubcategory,
             getById: getById,
-            getByQuery: getByQuery
+            getByQuery: getByQuery,
+            createNewComment: createNewComment
         };
     }
 

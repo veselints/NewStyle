@@ -1,6 +1,7 @@
 <main class="index-page-content-container">
     <p class="post-location"><a href="#/">Home</a> &raquo; {{vm.subCategory}} </p>
     <div class="post-results">
+    <h2 class="no-results-msg" ng-show="vm.noresults">Sorry! <br/> There are no results for "{{vm.subCategory}}"!</h2>
         <div class="post" ng-repeat="post in vm.postsResult" ng-class="{doubleCol: $index==2}">
             <div class="post-home-image">
                 <img class="post-image" src="{{post.picture}}" alt="picture">
@@ -10,12 +11,10 @@
                     {{post.category}}
                 </p>
                 <p class="post-date">
-                    sep
-                    <!-- {{post.createdOn}} -->
+                    {{ post.createdOn | monthFilter }}
                 </p>
                 <p class="post-date">
-                    13
-                    <!-- {{post.createdOn}} -->
+                    {{ post.createdOn | dayFilter }}
                 </p>
             </div>
             <a href="#/posts/{{post._id}}">

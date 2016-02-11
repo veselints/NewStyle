@@ -579,10 +579,11 @@ p.tags-tags {
     box-shadow: inset 0 0 5px #3a3a3a;
 }
 
-.comment-avatar-wrapper img {
+.comment-image-image {
     position: absolute;
     top: 4px;
     left: 4px;
+    object-fit: cover;
 }
 
 p.comment-date {
@@ -617,7 +618,7 @@ p.comment-text {
     text-align: right;
 }
 
-a.reply-btn {
+button.reply-btn {
     display: inline-block;
     color: #6e6e6e;
     margin-top: 10px;
@@ -852,3 +853,16 @@ p.post-location a:hover {
 }
 
 
+.no-results-msg {
+    font-family: LigueGothic;
+    color: #dcc08e;
+    text-transform: uppercase;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 3px 3px black;
+    margin: 150px 20px;
+}
+
+.nested {
+    padding-left: 50px;
+}
