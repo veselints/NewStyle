@@ -116,13 +116,6 @@ nav.site-navigation>ul>li>ul.submenu a:active {
 
 /*Styling search*/
 
-.mobile-search-icon {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-}
-
 .search-submit {
     cursor: pointer;
 }

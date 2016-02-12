@@ -107,11 +107,26 @@ p.tags-tags {
     display: none;
 }
 
+/*Styling navigation*/
+
+nav.visible-navigation {
+    display: block;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    z-index: 20;
+    background-color: #333;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.6);
+    margin: 0;
+}
+
+nav.hidden-navigation {
+    display: none;
+}
+
 nav.site-navigation>ul>li {
     display: block;
 }
-
-/*Styling navigation*/
 
 nav.site-navigation>ul>li>a {
     padding: 40px 20px 20px 40px;
@@ -153,19 +168,8 @@ nav.site-navigation>ul>li>ul.submenu li>a {
 	display: none;
 }
 
-nav.site-navigation {
-	display: none;
-}
-
 .menu-checkbox:checked ~ nav.site-navigation {
-    display: block;
-    position: absolute;
-    top: -60px;
-    left: 0;
-    z-index: 20;
-    background-color: #333;
-    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.6);
-    margin: 0;
+    
 }
 
 .search_field {
@@ -182,12 +186,15 @@ nav.site-navigation {
 }
 
 .mobile-search .mobile-search-icon {
-    display: inline-block;
+    display: block;
     position: absolute;
     right: -32px;
-    top: -24px;
-    font-size: 120px;
+    top: 10px;
     color: #dcc08e;
+    background-image: url('../img/magnifierMobile.png');
+    background-size: cover;
+    width: 80px;
+    height: 80px;
 }
 
 .mobile-search-icon:hover,

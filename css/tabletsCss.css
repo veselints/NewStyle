@@ -95,7 +95,21 @@ div.doubleCol {
 
 /*Styling navigation*/
 
-nav.site-navigation {
+nav.visible-navigation {
+    display: block;
+    display: block;
+    position: absolute;
+    top: -78px;
+    left: 0;
+    font-size: 30px;
+    z-index: 20;
+    background-color: #333;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.6);
+    margin: 0;
+    width: 300px;
+}
+
+nav.hidden-navigation {
     display: none;
 }
 
@@ -138,19 +152,6 @@ nav.site-navigation>ul>li>ul.submenu li {
     display: none;
 }
 
-.menu-checkbox:checked ~ nav.site-navigation {
-    display: block;
-    position: absolute;
-    top: -78px;
-    left: 0;
-    font-size: 30px;
-    z-index: 20;
-    background-color: #333;
-    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.6);
-    margin: 0;
-    width: 300px;
-}
-
 .search_field {
     display: none;
 }
@@ -165,12 +166,15 @@ nav.site-navigation>ul>li>ul.submenu li {
 }
 
 .mobile-search .mobile-search-icon {
-    display: inline-block;
+    display: block;
     position: absolute;
     right: -32px;
-    top: -16px;
-    font-size: 80px;
+    top: 5px;
     color: #dcc08e;
+    background-image: url('../img/magnifierMobile.png');
+    background-size: cover;
+    width: 60px;
+    height: 60px;
 }
 
 .mobile-search-icon:hover,
@@ -194,7 +198,7 @@ nav.site-navigation>ul>li>ul.submenu li {
     border-right: 3px solid #595959;
     border-bottom: 3px solid #595959;
     right: 40px;
-    width: 300px;
+    width: 320px;
 }
 
 /*Styling logo*/

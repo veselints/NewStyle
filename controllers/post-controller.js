@@ -17,6 +17,13 @@
             homeandgarden: ["furniture", "electrinics", "bashmaistor", "flowers", "horticulture", "trees"]
         };
 
+        var width = $(document).width();
+        var ratio = window.devicePixelRatio;
+        if (width/ratio < 900) {
+            $('.site-navigation').removeClass('visible-navigation');
+            $('.site-navigation').addClass('hidden-navigation');
+        }
+
         posts.getById(currentId)
             .then(function(postResult) {
                 var i;

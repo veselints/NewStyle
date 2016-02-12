@@ -41,6 +41,13 @@
         var locationObject = $location.search();
         var pageNumber = Number(locationObject.page) || 1;
 
+        var width = $(document).width();
+        var ratio = window.devicePixelRatio;
+        if (width/ratio < 900) {
+            $('.site-navigation').removeClass('visible-navigation');
+            $('.site-navigation').addClass('hidden-navigation');
+        }
+
         posts.getBySubcategory(currentCategory, pageNumber)
             .then(function(postsResult) {
                 vm.postsResult = postsResult.posts;

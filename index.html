@@ -17,8 +17,7 @@
     <header id="header-container">
         <span id="logo"></span>
         <div class="mobile-search" ng-controller="SearchController">
-            <a class="mobile-search-icon" href="#" ng-click="mobileSearch(mobileQuery)">
-                     &#9906;   
+            <a class="mobile-search-icon" href="" ng-click="mobileSearch(mobileQuery)">  
             </a>
             <input type="text" class="mobile-search-field" name="mobileSearch" value="" placeholder="Search" ng-model="mobileQuery">
         </div>
@@ -195,6 +194,12 @@
         $(document).ready(function(){
             $('#customText').on('click', function() {
                 $('.text-in-footer').css('display', 'block');
+            });
+            $('.menu-lable').on('click', function() {
+                debugger;
+                $('.site-navigation').removeClass('hidden-navigation');
+                $('.site-navigation').addClass('visible-navigation');
+                return false;
             });
         });
     </script>
