@@ -28,6 +28,34 @@ html body {
     margin: 1.2%;
 }
 
+p.post-summary {
+    font-size: 12px;
+    line-height: 18px;
+    height: 90px;
+}
+
+p.post-author {
+    font-size: 16px;
+}
+
+p.post-title {
+    font-size: 27px;
+}
+
+p.post-category {
+    font-size: 21.5px;
+    margin-bottom: 9px;
+    background-color: #9a1d0d;
+    padding: 9px 9px 9px 11px;
+    text-shadow: 1px 1px black;
+}
+
+p.post-date {
+    font-size: 45px;
+    line-height: 22.5px;
+    margin-bottom: 18px;
+}
+
 div.doubleCol {
     width: 47.3%;
 }
@@ -42,7 +70,6 @@ div.doubleCol {
 
 .credentials {
     text-align: right;
-    padding-right: 12%;
 }
 
 .credentials-br {
@@ -51,7 +78,7 @@ div.doubleCol {
 
 .footer .credentials {
     text-align: center;
-    font-size: 0.75em;
+    font-size: 12px;
 }
 
 .credentials-separator {
@@ -70,7 +97,7 @@ nav.site-navigation>ul>li {
 }
 
 nav.site-navigation>ul>li>a {
-    font-size: 1.3em;
+    font-size: 20px;
     padding: 8px 6px;
 }
 
@@ -127,7 +154,7 @@ nav.site-navigation>ul>li>ul.submenu {
 
 /*Styling sidebar headers*/
 .post-sedebar h4 {
-    font-size: 1.3em;
+    font-size: 21px;
 }
 
 .post-sedebar {
@@ -147,8 +174,17 @@ nav.site-navigation>ul>li>ul.submenu {
     width: 80%;
 }
 
+p.post-full-title {
+    font-size: 32px;
+}
+
+p.post-full-author {
+    font-size: 16px;
+}
+
 .post-full-text {
-    font-size: 0.75em;
+    line-height: 18px;
+    font-size: 12px;
 }
 
 .related,
@@ -167,13 +203,41 @@ nav.site-navigation>ul>li>ul.submenu {
     height: 186px;
 }
 
+.post-full-attributes-contents h4 {
+    font-size: 21px;
+}
+
+p.tags-tags {
+    font-size: 12px;
+}
+
+.related-contents li a {
+    font-size: 12px;
+}
+
 .tags-phone,
 .share-phone {
     display: none;
 }
 
-a.reply-btn {
+button.reply-btn {
     padding: 10px;
+    font-size: 12px;
+}
+
+p.comment-date {
+    font-size: 24px;
+    line-height: 11px;
+    padding: 10px 4px 0 0;
+}
+
+p.comment-author {
+    font-size: 21px;
+}
+
+p.comment-text {
+    font-size: 12px;
+    line-height: 16px;
 }
 
 .comment-image-content {
@@ -202,4 +266,14 @@ a.reply-btn {
 }
 .index-page-content-container .post-results div.doubleCol {
     width: 88%;
+}
+
+.footer-content .footer-column p.footer-header,
+.pagination a {
+    font-size: 30px;
+}
+
+.pagination_go_left a,
+.pagination_go_right a {
+    font-size: 51px;
 }

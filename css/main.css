@@ -76,7 +76,7 @@ nav.site-navigation>ul>li {
 
 nav.site-navigation>ul>li>a {
     font-family: LigueGothic;
-    font-size: 1.4em;
+    font-size: 22px;
     text-transform: uppercase;
     color: white;
     display: inline-block;
@@ -102,7 +102,7 @@ nav.site-navigation>ul>li>ul.submenu li {
 
 nav.site-navigation>ul>li>ul.submenu a {
     font-family: LigueGothic;
-    font-size: 1.4em;
+    font-size: 22px;
     text-transform: uppercase;
     color: white;
     text-shadow: 2px 2px black;
@@ -131,7 +131,7 @@ nav.site-navigation>ul>li>ul.submenu a:active {
     border-right: 1px solid #595959;
     border-bottom: 1px solid #595959;
     float: right;
-    padding: 0.3em;
+    padding: 5px;
     background-color: #1e1e1e;
     height: 100%;
 }
@@ -140,15 +140,15 @@ nav.site-navigation>ul>li>ul.submenu a:active {
     border: none;
     text-shadow: black;
     color: white;
-    margin: 0.3em;
+    margin: 5px;
     background-color: transparent;
     width: 150px;
-    font-size: 0.9em;
+    font-size: 15px;
     font-style: italic;
 }
 
 .search_field button {
-    padding: 0.3em;
+    padding: 5px;
     border: none;
     height: 100%;
     background-color: transparent;
@@ -206,18 +206,7 @@ div.doubleCol .post-home-image {
     float: right;
 }
 
-p.post-category {
-    font-size: 1.35em;
-    margin-bottom: 0.55em;
-    background-color: #9a1d0d;
-    padding: 9px 9px 9px 11px;
-    text-shadow: 1px 1px black;
-}
-
 p.post-date {
-    font-size: 2.8em;
-    line-height: 0.5em;
-    margin-bottom: 0.4em;
     padding: 0 7px 0 0;
     text-shadow: 0 0 5px #3a3a3a;
     clear: both;
@@ -227,25 +216,20 @@ p.post-title {
     font-family: LigueGothic;
     text-transform: uppercase;
     color: #9a1d0d;
-    font-size: 1.7em;
     margin: 10px 13px 0 13px;
 }
 
 p.post-author {
     font-family: LigueGothic;
     text-transform: uppercase;
-    font-size: 1em;
     margin: 0 13px;
 }
 
 p.post-summary {
     margin: 0 13px 25px 13px;
     color: #7b7b7b;
-    height: 7.6em;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 1.5em;
-    font-size: 0.75em;
 }
 
 .post-separator {
@@ -296,14 +280,12 @@ p.post-summary {
 }
 
 .pagination a {
-    font-size: 1.8em;
     font-family: LigueGothic;
 }
 
 .pagination_go_left a,
 .pagination_go_right a {
     font-family: Arial;
-    font-size: 3.2em;
 }
 
 .pagination_go_left a:hover,
@@ -354,15 +336,14 @@ p.post-summary {
 
 .footer-content .footer-column a,
 .footer-content .footer-column p.text-in-footer {
-    font-size: 0.75em;
-    line-height: 1.5em;
+    font-size: 12px;
+    line-height: 18px;
 }
 
 .footer-content .footer-column p.footer-header {
     font-family: LigueGothic;
     text-transform: uppercase;
     color: #dcc08e;
-    font-size: 2.5em;
     margin: 15px 0;
 }
 
@@ -412,7 +393,7 @@ p.post-summary {
     color: #5d5d5d;
     text-shadow: 1px 1px black;
     font-family: Arial;
-    font-size: 1.5em;
+    font-size: 18px;
 }
 
 .footer-content .footer-column a:hover span.bullet,
@@ -456,13 +437,11 @@ p.post-full-title {
     font-family: LigueGothic;
     text-transform: uppercase;
     color: #9a1d0d;
-    font-size: 2em;
 }
 
 p.post-full-author {
     font-family: LigueGothic;
     text-transform: uppercase;
-    font-size: 1em;
 }
 
 .post-full-separator {
@@ -472,7 +451,6 @@ p.post-full-author {
 }
 
 .post-full-text {
-    line-height: 1.3em;
     color: #7b7b7b;
 }
 
@@ -506,7 +484,6 @@ p.post-full-author {
 .post-full-attributes-contents h4 {
     font-family: LigueGothic;
     text-transform: uppercase;
-    font-size: 1.33em;
     margin: 28px 0 10px;
 }
 
@@ -518,7 +495,6 @@ p.tags-tags {
     text-transform: uppercase;
     background-color: #efefef;
     text-shadow: 1px 1px white;
-    font-size: 0.75em;
 }
 
 .related-contents li {
@@ -526,7 +502,6 @@ p.tags-tags {
 }
 
 .related-contents li a {
-    font-size: 0.75em;
     color: #6e6e6e;
 }
 
@@ -591,9 +566,6 @@ p.comment-date {
     text-transform: uppercase;
     color: white;
     float: right;
-    font-size: 1.5em;
-    line-height: 0.45em;
-    padding: 10px 4px 0 0;
     text-shadow: 0 0 3px #3a3a3a;
     clear: both;
 }
@@ -605,12 +577,9 @@ p.comment-date {
 p.comment-author {
     font-family: LigueGothic;
     text-transform: uppercase;
-    font-size: 1.33em;
 }
 
 p.comment-text {
-    font-size: 0.75em;
-    line-height: 1.3em;
     color: #7b7b7b;
 }
 
@@ -625,7 +594,7 @@ button.reply-btn {
     text-transform: uppercase;
     background-color: #efefef;
     text-shadow: 1px 1px white;
-    font-size: 0.75em;
+    border: 0;
 }
 
 .inner-comments {
@@ -689,7 +658,7 @@ button.reply-btn {
 }
 
 .aside-bullets ul li a {
-    font-size: 0.75em;
+    font-size: 12px;
     color: #6e6e6e;
 }
 
@@ -713,9 +682,9 @@ button.reply-btn {
 .aside-text p {
     margin: 0 16px 16px;
     padding-bottom: 16px;
-    font-size: 0.75em;
+    font-size: 12px;
     color: #6e6e6e;
-    line-height: 1.35em;
+    line-height: 16px;
 }
 
 .post-sedebar .aside-tabs {
@@ -766,13 +735,13 @@ button.reply-btn {
 
 .aside-link-to-post p.title {
     text-shadow: 1px 1px white;
-    font-size: 0.75em;
+    font-size: 12px;
     padding-bottom: 4px;
 }
 
 .aside-link-to-post p.author {
     text-shadow: 1px 1px white;
-    font-size: 0.6em;
+    font-size: 10px;
     font-family: Georgia;
     color: #a1a1a1;
     font-style: italic;
@@ -780,7 +749,7 @@ button.reply-btn {
 
 p.post-location {
     color: #8e8e8e;
-    font-size: 0.75em;
+    font-size: 12px;
     margin: 0 0 12px 6%;
 }
 
