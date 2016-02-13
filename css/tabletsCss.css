@@ -199,6 +199,8 @@ nav.site-navigation>ul>li>ul.submenu li {
     border-bottom: 3px solid #595959;
     right: 40px;
     width: 320px;
+    color: white;
+    font-style: italic;
 }
 
 /*Styling logo*/

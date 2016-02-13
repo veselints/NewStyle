@@ -4,6 +4,7 @@
     function SearchController($scope, $location) {
         $scope.mobileSearch = function(query) {
             if (query == undefined || query == "") {
+                $("#mobileSearchField").focus();
                 return;
             }
             var path = '/results/' + query;
