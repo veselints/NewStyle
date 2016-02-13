@@ -70,9 +70,11 @@
 
 
         vm.addComment = function(comment) {
-            //Validations!!!!!!!!
-
-
+            if (!comment.authorName || comment.authorName == '' ||
+                !comment.avatar || comment.avatar == '' ||
+                !comment.text || comment.text == '') {
+                window.alert('Your comment is not in valid format!');
+            }
             
             comment.parentId = vm.commentTobeRepliedId;
             posts.createNewComment(comment, currentId)

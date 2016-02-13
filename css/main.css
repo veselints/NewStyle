@@ -740,17 +740,25 @@ button.reply-btn {
     font-style: italic;
 }
 
-p.post-location {
+p.post-location-post {
     color: #8e8e8e;
     font-size: 12px;
     margin: 0 0 12px 6%;
 }
 
-p.post-location a {
+p.post-location {
+    color: #8e8e8e;
+    font-size: 12px;
+    margin: 0 0 12px 1%;
+}
+
+p.post-location a,
+p.post-location-post a {
     color: #676767;
 }
 
-p.post-location a:hover {
+p.post-location a:hover,
+p.post-location-post a:hover {
     color: white;
 }
 

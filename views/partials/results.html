@@ -2,38 +2,7 @@
     <p class="post-location"><a href="#/">Home</a> &raquo; {{vm.currentQuery}} </p>
     <div class="post-results">
         <h2 class="no-results-msg" ng-show="vm.noresults">Sorry! <br/> There are no results for "{{vm.currentQuery}}"!</h2>
-        <div class="post" ng-repeat="post in vm.postsResult" ng-class="{doubleCol: $index==2}">
-            <div class="post-home-image">
-                <img class="post-image" src="{{post.picture}}" alt="picture">
-            </div>
-            <div class="post-image-content">
-                <p class="post-category">
-                    {{post.category}}
-                </p>
-                <p class="post-date">
-                    {{ post.createdOn | monthFilter }}
-                </p>
-                <p class="post-date">
-                    {{ post.createdOn | dayFilter }}
-                </p>
-            </div>
-            <a href="#/posts/{{post._id}}">
-                <p class="post-title">
-                    {{post.title}}
-                </p>
-            </a>
-            <p class="post-author">
-                posted by {{post.authorName}}
-            </p>
-            <hr class="post-separator" />
-            <p class="post-summary">
-                {{post.text}} 
-                <!-- This may also be filtered -->
-            </p>
-            <div class="post-bottom">
-            </div>
-        </div>
-
+        <div postsgrid></div postsgrid>
     </div>
     <aside class="post-sedebar">
         <div class="aside-nav-wrapper">

@@ -3,10 +3,12 @@
 
     function SearchController($scope, $location) {
         $scope.mobileSearch = function(query) {
-            if (query == undefined || query == "") {
+            if (query == undefined || query == '') {
                 $("#mobileSearchField").focus();
                 return;
             }
+            $("#mobileSearchField").val('');
+            $("#mobileSearchField").focus();
             var path = '/results/' + query;
             $location.search('page', '1');
             $location.path(path);

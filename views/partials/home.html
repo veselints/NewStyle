@@ -1,7 +1,6 @@
 <div class="index-page-content-container container">
     <p class="post-location"><a href="#">Home</a></p>
     <div id="main-content">
-
         <div class="post" ng-repeat="post in vm.latestElevenPosts" ng-class="{doubleCol: $index==2}">
             <div class="post-home-image">
                 <img class="post-image" src="{{post.picture}}" alt="picture">
@@ -27,15 +26,13 @@
             </p>
             <hr class="post-separator" />
             <p class="post-summary">
-                {{post.text}} 
+                {{post.text}}
                 <!-- This may also be filtered -->
             </p>
             <div class="post-bottom">
             </div>
         </div>
-
     </div>
-
     <div class="pagination-container">
         <p class="pagination_go_left"><a href="#/?page={{vm.previousPage}}">&laquo;</a></p>
         <p class="pagination">

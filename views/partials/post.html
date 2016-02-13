@@ -1,5 +1,5 @@
 <main class="post-page-content-container container">
-    <p class="post-location"><a href="#/">Home</a> &raquo; <a href="#/category/{{vm.post.subCategory}}">{{vm.post.subCategory}}</a> &raquo; {{vm.post.title}}</p>
+    <p class="post-location-post"><a href="#/">Home</a> &raquo; <a href="#/category/{{vm.post.subCategory}}">{{vm.post.subCategory}}</a> &raquo; {{vm.post.title}}</p>
     <article class="post-and-comments">
         <div class="post-full-content">
             <div class="post-full-attributes-contents">
@@ -119,9 +119,8 @@
                     <!-- TODO: fix image -->
                     <img src="./img/miniAvatar.jpg" alt="">
                     <div class="aside-link-to-post-texts">
-                        <p class="title">{{recent.title}}</p>
-                        <!-- TODO: Fix date!!! -->
-                        <p class="author">Posted by {{recent.authorName}} on {{recent.createdOn}}</p>
+                        <a href="#/posts/{{recent._id}}"><p class="title">{{recent.title}}</p></a>
+                        <p class="author">Posted by {{recent.authorName}} on {{recent.createdOn | datefilter}}</p>
                     </div>
                 </div>
                 <div class="aside-bottom"></div>
@@ -131,9 +130,8 @@
                     <!-- TODO: fix image -->
                     <img src="./img/miniAvatar.jpg" alt="">
                     <div class="aside-link-to-post-texts">
-                        <p class="title">{{popular.title}}</p>
-                        <!-- TODO: Fix date!!! -->
-                        <p class="author">Posted by {{popular.authorName}} on {{popular.createdOn}}</p>
+                        <a href="#/posts/{{popular._id}}"><p class="title">{{popular.title}}</p></a>
+                        <p class="author">Posted by {{popular.authorName}} on {{popular.createdOn | datefilter}}</p>
                     </div>
                 </div>
                 <div class="aside-bottom"></div>
@@ -143,9 +141,8 @@
                     <!-- TODO: fix image -->
                     <img src="./img/miniAvatar.jpg" alt="">
                     <div class="aside-link-to-post-texts">
-                        <p class="title">{{random.title}}</p>
-                        <!-- TODO: Fix date!!! -->
-                        <p class="author">Posted by {{random.authorName}} on {{random.createdOn}}</p>
+                        <a href="#/posts/{{random._id}}"><p class="title">{{random.title}}</p></a>
+                        <p class="author">Posted by {{random.authorName}} on {{random.createdOn | datefilter}}</p>
                     </div>
                 </div>
                 <div class="aside-bottom"></div>

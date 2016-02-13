@@ -1,0 +1,30 @@
+<div class="post" ng-repeat="post in vm.postsResult" ng-class="{doubleCol: $index==2}">
+    <div class="post-home-image">
+        <img class="post-image" src="{{post.picture}}" alt="picture">
+    </div>
+    <div class="post-image-content">
+        <p class="post-category">
+            {{post.category}}
+        </p>
+        <p class="post-date">
+            {{ post.createdOn | monthFilter }}
+        </p>
+        <p class="post-date">
+            {{ post.createdOn | dayFilter }}
+        </p>
+    </div>
+    <a href="#/posts/{{post._id}}">
+        <p class="post-title">
+            {{post.title}}
+        </p>
+    </a>
+    <p class="post-author">
+        posted by {{post.authorName}}
+    </p>
+    <hr class="post-separator" />
+    <p class="post-summary">
+        {{post.text}}
+    </p>
+    <div class="post-bottom">
+    </div>
+</div>

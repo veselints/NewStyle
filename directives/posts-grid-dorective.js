@@ -1,16 +1,16 @@
 (function () {
     'use strict';
 
-    function commentForm() {
+    function postsgrid() {
         debugger;
 
         return {
             restrict: 'A',
             scope: true,
-            templateUrl: 'views/directives/comment-form-directive.html'
+            templateUrl: 'views/directives/posts-grid-directive.html'
         };
     }
 
     angular.module('theStyleApp.directives')
-        .directive('commentForm', [commentForm]);
+        .directive('postsgrid', [postsgrid]);
 }());
